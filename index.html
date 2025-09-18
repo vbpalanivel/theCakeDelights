@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cake Delights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff; /* clean base */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: #fff;
+      padding: 30px 0 20px;
+      text-align: center;
+      border-bottom: 3px solid #ff4d88;
+    }
+    header img {
+      max-width: 160px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      margin: 5px 0;
+      font-size: 2rem;
+      color: #d6336c;
+    }
+    header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #fff;
+      text-align: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #d6336c;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #000;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: #ffe6f0;
+      padding: 40px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #d6336c;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-top: 4px solid #ff80aa;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 14px rgba(0,0,0,0.12);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #d6336c;
+    }
+
+    /* GALLERY */
+    .gallery {
+      margin-bottom: 50px;
+    }
+    .gallery h2 {
+      color: #d6336c;
+      margin-bottom: 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 40px;
+      background: #ffe6f0;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+    }
+    .contact h2 {
+      color: #d6336c;
+    }
+    .contact p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ff3385;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #cc0066;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER WITH LOGO -->
+  <header>
+    <img src="logo.jpg" alt="The Cake Delights Logo">
+    <h1>The Cake Delights</h1>
+    <p>Delicious Brownies & Custom Cakes Made With Love</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Our Treats</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <!-- ABOUT / HERO -->
+    <section class="hero" id="about">
+      <h2>Welcome to The Cake Delights</h2>
+      <p>We craft mouth-watering brownies and customized cakes for birthdays, weddings, and all your special events. Each creation is baked with passion, love, and a sprinkle of sweetness!</p>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <h2 style="color:#d6336c; margin-bottom:25px;">Our Specialties</h2>
+      <div class="products">
+        <div class="card">
+          <h3>Signature Brownies</h3>
+          <p>Rich, fudgy, and unforgettable – baked fresh just for you.</p>
+        </div>
+        <div class="card">
+          <h3>Birthday Cakes</h3>
+          <p>Personalized designs and flavors to make your day truly special.</p>
+        </div>
+        <div class="card">
+          <h3>Event Cakes</h3>
+          <p>From weddings to anniversaries, we bring your dream cake to life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <h2>Our Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1599785209707-28c29c3d6f1b" alt="Chocolate Brownie">
+        <img src="https://images.unsplash.com/photo-1559628233-965f6d4d0a36" alt="Birthday Cake">
+        <img src="https://images.unsplash.com/photo-1608219959304-5a1d2dfb5bb7" alt="Custom Wedding Cake">
+        <img src="https://images.unsplash.com/photo-1588195535361-56f6ad969f7a" alt="Dessert Table">
+        <img src="https://images.unsplash.com/photo-1601933471679-c9e0547d09d0" alt="Cupcakes">
+        <img src="https://images.unsplash.com/photo-1605478525329-0fdbbb4d6539" alt="Chocolate Cake">
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>📍 Thendral Nagar, Perundurai, Tamil Nadu 638052</p>
+      <p>📞 079047 86809</p>
+      <a class="button" href="https://www.instagram.com/at.thecakedelights/profilecard/?igsh=eWFoa2kxbGF6bjNv" target="_blank">📸 Follow us on Instagram</a>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 The Cake Delights. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
