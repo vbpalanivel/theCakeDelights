@@ -159,6 +159,84 @@
       background: #cc0066;
     }
 
+    .contact-item {
+  margin: 12px 0;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center align like your screenshot */
+  gap: 8px;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #ff3385;
+  color: white;
+  border-radius: 50px;   /* pill shape */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+a.button i {
+  margin-right: 8px; /* little space before text */
+}
+
+a.button:hover {
+  background: #e62e73; /* slightly darker pink */
+  transform: translateY(-2px); /* soft lift on hover */
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
+}
+.expo {
+  margin: 60px auto;
+  text-align: center;
+  padding: 40px;
+  background: #fff5f9;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+}
+
+.expo h2 {
+  color: #d6336c;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.expo-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.expo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.expo-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.expo-gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+
     /* FOOTER */
     footer {
       background: #000;
@@ -168,6 +246,7 @@
       margin-top: 50px;
     }
   </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
@@ -183,6 +262,7 @@
     <a href="#about">About</a>
     <a href="#products">Our Treats</a>
     <a href="#gallery">Gallery</a>
+    <!-- <a href="#expo">Our Expo Moments</a> -->
     <a href="#contact">Contact</a>
   </nav>
 
@@ -225,8 +305,6 @@
         <img src="img/7.webp" alt="Customized Birthday Cake">
         <img src="img/8.webp" alt="Customized Birthday Cake">
         <img src="img/9.webp" alt="Customized Birthday Cake">
-        <img src="img/10.webp" alt="Customized Birthday Cake">
-        <img src="img/11.webp" alt="Customized Birthday Cake">
         <img src="img/12.webp" alt="Customized Birthday Cake">
         <img src="img/13.webp" alt="Customized Birthday Cake">
         <img src="img/GermanForest.webp" alt="Customized Birthday Cake">
@@ -234,13 +312,54 @@
       </div>
     </section>
 
+    <!-- EXPO SECTION -->
+<!-- <section class="expo" id="expo">
+  <h2>Our Expo Moments</h2>
+  <p class="expo-subtitle">
+    We are proud to have showcased The Cake Delights at events conducted by women entrepreneurs. 
+    Here’s a glimpse of our sweet journey outside the kitchen!
+  </p>
+
+  <div class="expo-gallery">
+    <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754" alt="Expo Stall 1">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Expo Stall 2">
+  </div>
+</section>-->
+
+
     <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <h2>Contact Us</h2>
-      <p>📍 Thendral Nagar, Perundurai, Tamil Nadu 638052</p>
-      <p>📞 079047 86809</p>
-      <a class="button" href="https://www.instagram.com/at.thecakedelights/profilecard/?igsh=eWFoa2kxbGF6bjNv" target="_blank">📸 Follow us on Instagram</a>
-    </section>
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact-item">
+    <i class="fas fa-map-marker-alt" style="color:#d6336c;"></i>
+    <a href="https://maps.app.goo.gl/QU6yCD7y76NakyF89" style="margin-left:10px; color:#333; text-decoration:none;" target="_blank"><span>Thendral Nagar, Perundurai, Tamil Nadu 638052</span></a>
+  </div>
+
+  <div class="contact-item">
+    <a href="tel:07904786809" style="margin-left:10px; color:#333; text-decoration:none; font-weight:500;">
+      <i class="fas fa-phone-alt" style="color:#d6336c;"></i>
+    </a>
+    <a href="https://wa.me/917904786809" target="_blank" 
+       style="color:#25D366; text-decoration:none; font-weight:bold;">
+      <i class="fab fa-whatsapp" style="color:#25D366; margin-left:8px;"></i>
+    </a>
+    <a href="tel:07904786809" style="margin-left:10px; color:#333; text-decoration:none; font-weight:500;">
+      079047 86809
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <i class="fas fa-envelope" style="color:#d6336c;"></i>
+    <a href="mailto:at.thecakedelights@gmail.com" style="margin-left:10px; color:#333; text-decoration:none;">
+      at.thecakedelights@gmail.com
+    </a>
+  </div>
+
+  <a class="button" href="https://www.instagram.com/at.thecakedelights/profilecard/?igsh=eWFoa2kxbGF6bjNv" target="_blank">
+    <i class="fab fa-instagram"></i> Follow us on Instagram
+  </a>
+</section>
   </div>
 
   <!-- FOOTER -->
