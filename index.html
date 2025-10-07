@@ -398,9 +398,82 @@
     .prev:hover, .next:hover {
       color: #ff80ab;
     }
+
+    /* Fixed Announcement Banner */
+    .order-note {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px 25px;
+  max-width: 600px;
+  background: linear-gradient(135deg, #ffe6ef, #fff5f9);
+  border: 2px solid #ff66a3;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 102, 163, 0.2);
+  font-size: 1.1rem;
+  color: #c2185b;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  animation: gentlePulse 2.5s infinite ease-in-out;
+}
+
+/* Subtle glowing pulse effect */
+@keyframes gentlePulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 102, 163, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255, 102, 163, 0.5);
+  }
+}
+
+.order-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+/*  background: linear-gradient(90deg, #ff66a3, #ff99bb, #ffd6e8);*/
+  background: linear-gradient(90deg, #ff3d7f, #ff66b2, #ffb3d9);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 15px;
+  z-index: 2000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  animation: bannerGlow 2.5s infinite ease-in-out;
+}
+
+
+/* Glow animation */
+@keyframes bannerGlow {
+  0%, 100% { box-shadow: 0 0 14px rgba(255, 102, 163, 0.5); }
+  50%      { box-shadow: 0 0 22px rgba(255, 153, 187, 0.7); }
+}
+
+/*@keyframes bannerGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 102, 163, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255, 102, 163, 0.6);
+  }
+}*/
+
+/* Push down content so it doesn’t hide behind banner */
+header {
+  margin-top: 55px;
+}
+
+
   </style>
 </head>
 <body>
+  <div class="order-banner">
+  <!-- 🎂 <strong>Birthday cake orders</strong> should be placed <strong>1 day in advance</strong> -->
+  🎂 <strong>To ensure we can create the perfect birthday cake for you, we recommend placing your order at least one day in advance</strong>
+  <!-- 🎂 <strong>Please place birthday cake orders at least one day in advance</strong> -->
+</div>
+
 <!-- HEADER WITH LOGO -->
   <header>
     <img src="logo.jpg" alt="The Cake Delights Logo">
@@ -412,7 +485,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#products">Our Treats</a>
-    <a href="#upcoming-expo">Our Expo Moments</a>
+    <a href="#upcoming-expo">Our Expos</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -450,16 +523,6 @@
 
     <ul class="expo-timeline">
       <li>
-        <span class="expo-date">27 & 28, Sep 2025</span>
-        <div class="expo-info">
-          <h4>Chic Click - Deepavali Kondattam – Perundurai</h4>
-          <p>Showcasing our signature brownies and custom birthday cakes at the town's largest women’s business expo.</p>
-          <div class="expo-photo">
-            <img src="img/Stall/ChicClick_Sep_2025.jpg" alt="Chic Click - Deepavali Kondattam – Perundurai" onclick="openLightbox(this, 'upcoming')">
-          </div>
-        </div>
-      </li>
-      <li>
         <span class="expo-date">11 & 12, Oct 2025</span>
         <div class="expo-info">
           <h4>Shop Wave Expo - Deepavali Sale – Perundurai</h4>
@@ -477,12 +540,16 @@
     <h3 class="expo-title completed">🎉 Completed Expos</h3>
     <div class="expo-gallery">
       <div class="expo-item">
-        <img src="img/Stall/ShopWaveExpo_Dec_2024.jpg" alt="Shop Wave Expo – Perundurai (2024)" onclick="openLightbox(this, 'completed')">
-        <p class="expo-caption">Shop Wave Expo – Perundurai (2024)</p>
+        <img src="img/Stall/ChicClick_Sep_2025.jpg" alt="Chic Click - Deepavali Kondattam – Perundurai (2025)" onclick="openLightbox(this, 'completed')">
+        <p class="expo-caption">Chic Click - Deepavali Kondattam – Perundurai (2025)</p>
       </div>
       <div class="expo-item">
         <img src="img/Stall/ChicClick_Aug_2025.jpg" alt="Chic Click – AADI SALE – Perundurai (2025)" onclick="openLightbox(this, 'completed')">
         <p class="expo-caption">Chic Click – AADI SALE – Perundurai (2025)</p>
+      </div>
+      <div class="expo-item">
+        <img src="img/Stall/ShopWaveExpo_Dec_2024.jpg" alt="Shop Wave Expo – Perundurai (2024)" onclick="openLightbox(this, 'completed')">
+        <p class="expo-caption">Shop Wave Expo – Perundurai (2024)</p>
       </div>
     </div>
   </section>
@@ -496,7 +563,7 @@
       <h3 class="gallery-title">🎂 Cakes</h3>
       <div class="gallery-grid">
         <img src="img/1.webp" alt="Customized Birthday Cake" onclick="openLightbox(this, 'cakes')">
-        <img src="img/3.webp" alt="Customized Birthday Cake" onclick="openLightbox(this, 'cakes')">
+        <img src="img/HeartCake.jpg" alt="Customized Birthday Cake" onclick="openLightbox(this, 'cakes')">
         <img src="img/4.webp" alt="Customized Birthday Cake" onclick="openLightbox(this, 'cakes')">
         <img src="img/5.webp" alt="Customized Birthday Cake" onclick="openLightbox(this, 'cakes')">
         <img src="img/6.webp" alt="Customized Birthday Cake" onclick="openLightbox(this, 'cakes')">
@@ -524,10 +591,16 @@
         <img src="brownie3.jpg" alt="Brownie Bites" onclick="openLightbox(this, 'brownies')"> -->
       </div>
     </div>
+    <!-- Add this below the Gallery section -->
+    
   </section>
 
+<p class="order-note">
+  <strong>We happily accept orders for celebration cakes and brownie trays for birthdays, weddings, corporate events, and more!</strong>
+</p>
   <!-- CONTACT -->
   <section class="contact" id="contact">
+
     <h2>Contact Us</h2>
     <div class="contact-item">
       <i class="fas fa-map-marker-alt" style="color:#d6336c;"></i>
